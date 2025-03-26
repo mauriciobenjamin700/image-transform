@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "78c4b8f8-6867-4ec8-9f2c-9f5ff0c77e8b",
+		"name": "ImageTransform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36315262"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Yugi\",\n    \"phone\": \"66 97777-6666\",\n    \"email\": \"yugi@ohh.com\",\n    \"password\": \"YugiOh777--\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "image",
+			"item": [
+				{
+					"name": "send",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f00a960-45e5-4ab0-84bd-5352acdfc10c",
+										"/home/mauricio-benjamin/Downloads/Famacha-Apresentation.png"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/image/blur",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"image",
+								"blur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/image/uploads/566713fa-1318-456a-9bb6-3e375e2f0383--2837838-artificial-inteligencia-a-icone-vetor.jpg",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"image",
+								"uploads",
+								"566713fa-1318-456a-9bb6-3e375e2f0383--2837838-artificial-inteligencia-a-icone-vetor.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-filtered",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/image/uploads/filtered/c7450621-ecff-4708-a5ec-e9bd53b62886--2837838-artificial-inteligencia-a-icone-vetor.jpg",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"image",
+								"uploads",
+								"filtered",
+								"c7450621-ecff-4708-a5ec-e9bd53b62886--2837838-artificial-inteligencia-a-icone-vetor.jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8005",
+			"type": "string"
+		}
+	]
+}

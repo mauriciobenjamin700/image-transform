@@ -34,4 +34,4 @@ services:
       - ./image-transform-api/image-transform.db:/api/image-transform.db
       - ./image-transform-api/uploads:/api/uploads
     ports:
-      - "8000:8000"
+      - "8005:8000"
