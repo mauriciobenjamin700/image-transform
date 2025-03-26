@@ -1,0 +1,35 @@
+networks:
+  image-transform-network:
+
+services:
+
+  image-transform:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: image-transform
+    networks:
+      - image-transform-network
+    ports:
+      - "8080:80"
+
+  image-transform-web:
+    build:
+      context: ./image-transform-web
+      dockerfile: Dockerfile
+    container_name: image-transform-web
+    networks:
+      - image-transform-network
+    depends_on:
+      - image-transform-api
+
+  image-transform-api:
+  build:
+    context: ./image-transform-api
+    dockerfile: Dockerfile
+    container_name: image-transform-api
+    networks:
+      - image-transform-network
+    volumes:
+      - ./image-transform-api/image-transform.db:/api/image-transform.db
+      - ./image-transform-api/uploads:/api/uploads
