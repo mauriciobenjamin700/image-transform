@@ -3,15 +3,15 @@ networks:
 
 services:
 
-  # image-transform:
-  #   build:
-  #     context: ./server
-  #     dockerfile: Dockerfile
-  #   container_name: image-transform
-  #   networks:
-  #     - image-transform-network
-  #   ports:
-  #     - "8080:80"
+  image-transform:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: image-transform
+    networks:
+      - image-transform-network
+    ports:
+      - "8080:80"
 
   image-transform-web:
     build:
@@ -22,8 +22,6 @@ services:
       - image-transform-network
     depends_on:
       - image-transform-api
-    ports:
-      - 8080:3000
 
   image-transform-api:
     build:
