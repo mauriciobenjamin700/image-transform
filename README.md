@@ -7,13 +7,17 @@ O projeto consiste em uma plataforma web para aplicar filtros em imagens
 Você irá precisar ter instalado em sua maquina, o git e o docker.
 
 - [clone este repositório](https://github.com/mauriciobenjamin700/image-transform.git)
-- [clone o repositório da api](https://github.com/mauriciobenjamin700/image-transform-api.git)
-- [clone o repositório da web](https://github.com/mauriciobenjamin700/image-transform-web.git)
+
+Agora, dentro do repositório `image-transform` faça:
+
+- [Clone o repositório da api](https://github.com/mauriciobenjamin700/image-transform-api.git)
+- [Clone o repositório da web](https://github.com/mauriciobenjamin700/image-transform-web.git)
 
 Dentro deste repositório, use o comando `docker compose up -d --build`
 
 A aplicação web estará [neste link](http://localhost:8080)
-A documentação da api estará [neste link](http://localhost:8005)
+
+A api estará [neste link](http://localhost:8005)
 
 ## Rotas da API
 
@@ -25,7 +29,7 @@ Remenda-se o uso do [postman](https://www.postman.com/) para testar a API e ente
 
 ## Filtros Válidos
 
-Envie sempre os filtros em letras minusculas
+Envie sempre os filtros em letras minusculas.
 
 ```python
     GRAY = "gray"

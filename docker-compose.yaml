@@ -13,15 +13,17 @@ services:
   #   ports:
   #     - "8080:80"
 
-  # image-transform-web:
-  #   build:
-  #     context: ./image-transform-web
-  #     dockerfile: Dockerfile
-  #   container_name: image-transform-web
-  #   networks:
-  #     - image-transform-network
-  #   depends_on:
-  #     - image-transform-api
+  image-transform-web:
+    build:
+      context: ./image-transform-web
+      dockerfile: Dockerfile
+    container_name: image-transform-web
+    networks:
+      - image-transform-network
+    depends_on:
+      - image-transform-api
+    ports:
+      - 8080:3000
 
   image-transform-api:
     build:
