@@ -11,7 +11,7 @@ services:
     networks:
       - image-transform-network
     ports:
-      - "8080:80"
+      - "80:80"
 
   image-transform-web:
     build:
@@ -22,6 +22,8 @@ services:
       - image-transform-network
     depends_on:
       - image-transform-api
+    ports:
+      - "8080:3000"
 
   image-transform-api:
     build:
