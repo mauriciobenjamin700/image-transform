@@ -13,13 +13,15 @@ Agora, dentro do repositório `image-transform` faça:
 - [Clone o repositório da api](https://github.com/mauriciobenjamin700/image-transform-api.git)
 - [Clone o repositório da web](https://github.com/mauriciobenjamin700/image-transform-web.git)
 
-Antes de executar o docker, deve ir na pasta da API **image-transform-api** apagar a pasta **image-transform.db** que tem dentro dela e criar um arquivo chamado `image-transform.db`, depois no terminal dê um `docker compose down`, `docker logs image-transform-ap`, `docker rm -f image-transform-api`
+Antes de executar o docker, deve ir na pasta da API **image-transform-api** e criar um arquivo chamado `image-transform.db`.
 
 Dentro deste repositório (image-transform), use o comando `docker compose up -d --build`
 
 A aplicação web estará [neste link](http://localhost:8080)
 
 A api estará [neste link](http://localhost:8005)
+
+Obs: Em caso de falha, execute `docker compose up -d --build` algumas vezes para que os containers se comuniquem.
 
 ## Rotas da API
 
